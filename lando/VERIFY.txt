@@ -1,0 +1,3 @@
+Mike Pirog does not provide ways to verify downloads of Lando.
+
+If you want, you can download it on your own at https://github.com/lando/lando/releases/tag/v3.0.0-rc.16

@@ -1,0 +1,22 @@
+Installing MAMP
+---------------
+
+1. Copy this folder to your computer.
+2. Follow the instructions in VERIFY.txt
+3. Follow instructions below depending on your operating system.
+
+
+Windows
+-------
+
+1. Run MAMP_MAMP_PRO_4.1.exe
+
+See https://documentation.mamp.info/en/MAMP-Windows/ for more information.
+
+
+MacOS
+-----
+
+1. Run MAMP_MAMP_PRO_5.3.pkg
+
+See https://documentation.mamp.info/en/MAMP-Mac/Installation/ for more information.

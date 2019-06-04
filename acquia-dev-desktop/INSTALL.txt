@@ -1,0 +1,23 @@
+Installing Acquia Dev Desktop
+-----------------------------
+
+1. Copy this folder to your computer.
+2. Follow the instructions in VERIFY.txt
+3. Follow instructions below depending on your operating system.
+
+
+Windows
+-------
+
+1. Run acquiadevdesktop-2-2019-02-08.exe
+
+See https://docs.acquia.com/dev-desktop/install/ for more information.
+
+
+MacOS
+-----
+
+1. Open acquiadevdesktop-2-2019-02-08.dmg
+2. Run the installer inside it
+
+See https://docs.acquia.com/dev-desktop/install/ for more information.

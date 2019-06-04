@@ -1,0 +1,26 @@
+Installing Docksal
+------------------
+
+1. Copy this folder to your computer.
+2. Copy the `docker`, `vagrant` and `virtualbox` folders to your computer as well.
+3. Follow the instructions in VERIFY.txt in this folder, the docker folder, the vagrant folder, and the virtualbox folder.
+4. Follow the instructions at https://docksal.io/installation
+
+Shortcuts
+---------
+
+I (mparker17) downloaded the script at https://get.docksal.io so instead of running...
+
+    $ DOCKER_NATIVE=1 bash <(curl -fsSL https://get.docksal.io)
+    # or
+    $ bash <(curl -fsSL https://get.docksal.io)
+
+... you can run...
+
+    $ DOCKER_NATIVE=1 bash <(get-docksal.sh)
+    # or
+    $ bash <(get-docksal.sh)
+
+... in this folder.
+
+Alternately, you can rename the `docksal--fin.sh` in this folder to `fin`, make it run-able with `chmod u+x fin` and put it somewhere in your shell's PATH.

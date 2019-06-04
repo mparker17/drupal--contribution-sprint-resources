@@ -1,0 +1,31 @@
+To verify the vagrant_2.2.4_SHA256SUMS file
+-------------------------------------------
+
+1. Go to https://www.hashicorp.com/security.html
+2. Copy the PGP public key on the page, and save it as "hashicorp.asc" in this folder
+3. In a terminal, run...
+
+        $ cd $this_folder
+        $ gpg --import hashicorp.asc # i.e.: the key you saved earlier
+        $ gpg --verify vagrant_2.2.4_SHA256SUMS.sig vagrant_2.2.4_SHA256SUMS
+
+    ... if verification succeeded, it should print...
+
+        Good signature from "HashiCorp Security <security@hashicorp.com>"
+
+    ... you should then proceed to verify the SHA256 sums in the next part.
+
+If you see anything else, then there was disc corruption, a network interruption during the download, or someone tampered with the file, and you should re-download everything (signature, sum, and file you intend to open) from https://www.vagrantup.com/downloads.html and re-run these steps, or ask for help.
+
+
+To verify SHA256 sums
+---------------------
+
+1. In a terminal, run...
+
+        $ cd $this_folder
+        $ shasum -a256 -c vagrant_2.2.4_SHA256SUMS
+
+    ...if verification succeeded, it should print "OK" next to the file you plan to open.
+
+If you see anything else, then there was disc corruption, a network interruption during the download, or someone tampered with the file, and you should re-download everything (signature, sum, and file you intend to open) from https://www.vagrantup.com/downloads.html and re-run these steps, or ask for help.

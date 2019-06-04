@@ -1,0 +1,84 @@
+Preparing to run a contribution sprint
+--------------------------------------
+
+If you want to help run a contribution sprint on your own, this file is for you!
+
+It mostly talks about what I did to prepare this USB stick, so you can do the same.
+
+
+Motivation and history
+----------------------
+
+Nothing destroys productivity / derails a sprint faster than a whole room full of people excited to contribute clogging up the network all trying to download stuff at the same time.
+
+At DrupalNorth Montreal 2016, Maxime Turcotte ( https://www.drupal.org/u/maxocub ) had the brilliant idea to take some of the extra USB sticks provided to us by the sponsors and put a copy of the major development environments at the time, and a recent clone of Drupal core, so we didn't overload the wifi during the actual sprint.
+
+
+Preparing the USB sticks
+------------------------
+
+I usually try formatting the USB sticks as follows:
+
+* A Master Boot Record (MBR) partition table with a FAT32 filesystem
+* A Master Boot Record (MBR) partition table with an ExFAT filesystem
+
+... if you have a large number of USB sticks and computer(s) with enough drivers, you could try NTFS, HFS+, APFS, ext2, as well, but most computers will support at least one of those two filesystems.
+
+
+Downloading the files
+---------------------
+
+I started by going to the website of each of the major development environments, and finding out the recommended ways to install them:
+
+* Acquia Dev Desktop: https://dev.acquia.com/downloads
+* Docksal: https://docksal.io/
+* DrupalVM: https://www.drupalvm.com/
+* Lando: https://docs.devwithlando.io/
+* MAMP: https://www.mamp.info/
+
+If the development environment's install instructions mentioned a pre-requisite, I also went and downloaded those. That lead me to:
+
+* Docker: https://download.docker.com/
+* Vagrant: https://www.vagrantup.com/downloads.html
+* VirtualBox: https://www.virtualbox.org/wiki/Downloads
+
+I then downloaded all of these things for as many platforms as I could, along with any files needed to verify the downloads (i.e.: SHA256SUM files), and organized them in folders on my computer.
+
+
+Documentation
+-------------
+
+I wrote a bunch of VERIFY.txt and README.txt files for each of the downloads, and made sure they were all using Windows EOL with the `unix2dos` utility.
+
+You should be able to copy most of these as-is and simply modify the verification commands to reflect the new versions.
+
+
+Drupal core
+-----------
+
+Cloning Drupal and installing dependencies with composer takes a lot of bandwidth!
+
+But since "the Drop is always moving", any clone you make will end up being a bit out-of-date. I usually make a clone a few days before, when I'm not stressed out with the conference and travel and everything else; and then try really hard to remember to make a newer clone the night before the sprint, or even better, the day of the sprint before everyone arrives... but that doesn't always happen, and it's good to have _something_ to fall back on.
+
+For a sprint, most people want to create (move forward) instead of looking at the history, so a shallow clone of Drupal is fine...
+
+    $ git clone --depth 1 --branch 8.8.x https://git.drupalcode.org/project/drupal.git
+
+Once you've downloaded Drupal, you should run `composer install`...
+
+    $ cd drupal
+    $ composer install
+
+When composer is finished composing, you can then zip and tar the clone. I usually name the files with the latest commit hash and the date so I can tell newer copies apart from older copies...
+
+    $ git log -n1 --oneline
+    25d13f4f3b (HEAD -> 8.7.x) Merge tag '8.7.0' into 8.7.x.
+
+    $ date '+%Y-%m-%d'
+    2019-06-04
+
+    $ cd ..
+    $ tar -czf drupal--8.7.x--2019-06-04--25d13f4f3b.tar.gz ./drupal
+    $ zip -r drupal--8.7.x--2019-06-04--25d13f4f3b.zip ./drupal
+
+When someone extracts the archive, they should have a fully working Git repository, with a vendor directory, which should allow them to get started right away.

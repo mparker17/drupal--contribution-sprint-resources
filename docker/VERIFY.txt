@@ -1,0 +1,3 @@
+Docker does not provide ways to verify downloads of Docker for Mac or Windows.
+
+If you want, you can download it on your own by following the instructions for your operating system at https://docs.docker.com/install/ (you might have to expand the sidebar to see your operating system's instructions).

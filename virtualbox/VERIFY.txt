@@ -1,0 +1,13 @@
+To verify SHA256 sums
+---------------------
+
+1. In a terminal, run:
+
+        $ cd $this_folder
+        $ shasum -a256 -c virtualbox_5.2.26_SHA256SUMS
+
+    ...if verification succeeded, it should print "OK" next to the file you plan to open.
+
+Note that I didn't download _everything_ for this version of VirtualBox, so you'll get a handful of "FAILED open or read" errors... the important thing is that it say "OK" next to the file you plan to open.
+
+If you see anything else next to the file you plan to open, then there was disc corruption, a network interruption during the download, or someone tampered with the file, and you should re-download everything (signature, sum, and file you intend to open) from https://www.vagrantup.com/downloads.html and re-run these steps, or ask for help.

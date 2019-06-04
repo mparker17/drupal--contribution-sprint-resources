@@ -1,0 +1,5 @@
+I (mparker17) downloaded and zipped these clones of Drupal on my own, so you're going to have to trust me.
+
+If you want, you can download it on your own by running:
+
+    git clone --depth 1 --branch 8.8.x https://git.drupalcode.org/project/drupal.git

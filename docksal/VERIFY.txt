@@ -1,0 +1,3 @@
+The Docksal team does not provide ways to verify downloads of Docksal.
+
+If you want, you can download it on your own by following the instructions at https://docksal.io/installation

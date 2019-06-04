@@ -1,0 +1,9 @@
+name: drupal
+recipe: drupal8
+#config:
+#  xdebug: true
+services:
+  mailhog:
+    type: 'mailhog'
+    hogfrom:
+      - 'appserver'

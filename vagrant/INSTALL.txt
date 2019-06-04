@@ -1,0 +1,6 @@
+Installing Vagrant
+------------------
+
+Vagrant is a dependency of Docksal and/or DrupalVM.
+
+Please follow the instructions in VERIFY.txt, then refer to the INSTALL.txt file in either the Docksal or DrupalVM folder.

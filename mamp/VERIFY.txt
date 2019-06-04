@@ -1,0 +1,13 @@
+To verify SHA256 sums
+---------------------
+
+1. In a terminal, run...
+
+        $ cd $this_folder
+        $ shasum -a256 -c mamp_SHA256SUMS
+
+    ...if verification succeeded, it should print "OK" next to the file you plan to open.
+
+If you see anything else, then there was disc corruption, a network interruption during the download, or someone tampered with the file, and you should re-download the file you intend to open from https://www.mamp.info/en/downloads/ and re-run these steps, or ask for help.
+
+Note that MAMP didn't provide the "mamp_SHA256SUMS" file, they just had the sums printed on the download page, which I (mparker17) copied and pasted into the "mamp_SHA256SUMS" file.

@@ -1,0 +1,6 @@
+Installing Lando
+----------------
+
+1. Copy this folder to your computer.
+2. Follow the instructions in VERIFY.txt
+3. Follow the instructions starting at https://docs.devwithlando.io/installation/system-requirements.html

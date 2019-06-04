@@ -1,0 +1,7 @@
+Installing DrupalVM
+-------------------
+
+1. Copy this folder to your computer.
+2. Copy the `docker`, `vagrant` and `virtualbox` folders to your computer as well.
+3. Follow the instructions in VERIFY.txt in this folder, the docker folder, the vagrant folder, and the virtualbox folder.
+4. Follow the instructions at https://github.com/geerlingguy/drupal-vm#quick-start-guide

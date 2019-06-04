@@ -1,0 +1,14 @@
+This folder contains clone(s) of Drupal core.
+
+Choose the latest one from the date in the filename (dates are in ISO 8601 format, i.e.: yyyy-mm-dd), and extract it.
+
+It will contain a full Git repository clone of Drupal core, with `composer install` already been run, so you should simply be able to point your development environment at the folder, and have everything work.
+
+As the Drupal community says, "the Drop is always moving", so it will likely be a bit out-of-date, even if the date in the filename was yesterday or today. However, it should be close enough for you to test and/or write patches without issue.
+
+The idea is that we don't want everyone in the sprint to bog down the internet by cloning Drupal and trying to run `composer install` all at once... that'll make the sprint slow and annoying for everyone. However, if you really really really need to have the latest code, run...
+
+    $ git pull --rebase
+    $ composer install
+
+... but there's a good chance composer will try to download everything even if it hasn't changed to build it's local package cache... sorry.
