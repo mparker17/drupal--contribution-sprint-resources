@@ -1,0 +1,20 @@
+# Compressed archives.
+*.tar.gz
+*.zip
+
+# Checksums, signatures, and keys.
+*SHA256SUMS
+*.asc
+*.sig
+
+# Linux packages.
+*.deb
+*.rpm
+
+# macOS disk images and installers.
+*.dmg
+*.pkg
+
+# Windows executables and installers.
+*.msi
+*.exe
